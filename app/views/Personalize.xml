@@ -2,9 +2,8 @@
 	<Window id="win" class="container" >
 
 		<ImageView id="image" onClick="openView"></ImageView>
-		<TextField id="username" onClick="showDone"></TextField>
-		<Button id="nameDone" onClick="saveName"></Button>
-		<Label id="userLabel"></Label>
+		<TextField id="username" onReturn="saveName"></TextField>
+		<Label id="userLabel" onClick="onUsernameClick"></Label>
 		<Label id="buttonsImage" onClick="showCoreVal"></Label>
 		<Button id="viewAch" onClick="showAchiev" class="myb">VIEW MY ACHIEVEMENTS</Button>
 		<Button id="liftme" onClick="showAdvice"class="myb">LIFT ME UP</Button>

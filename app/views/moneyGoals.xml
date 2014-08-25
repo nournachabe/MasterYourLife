@@ -1,0 +1,20 @@
+<Alloy>
+	<Collection src="moneyGoals"></Collection>
+	<Collection src="careerGoals"></Collection>
+	<Collection src="healthGoals"></Collection>
+	<Collection src="relationshipGoals"></Collection>
+	<Collection src="selfCareGoals"></Collection>
+	<Collection src="selfAwareness"></Collection>
+	<Collection src="giveBackGoals"></Collection>
+	<Window id="win">
+	<Label id="chooseLabel">Choose a Goal</Label>
+	<TableView id="moneyTable" onClick="goalSelect"></TableView>
+	<Menu id="menu" platform="android">
+    	<!-- Cannot specify node text.  Use attributes only. -->
+        <MenuItem id="itemHome"
+        	onClick="home"
+        	showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"
+        	/>
+		</Menu>
+	</Window>
+</Alloy>

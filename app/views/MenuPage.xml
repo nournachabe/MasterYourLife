@@ -1,10 +1,27 @@
 <Alloy>
+	<Collection src="inspiration_model"></Collection>
+	<Collection src="myMoneyGoals"></Collection>
+	<Collection src="myCareerGoals"></Collection>
+	<Collection src="myHealthGoals"></Collection>
+	<Collection src="myRelationshipGoals"></Collection>
+	<Collection src="mySelfCareGoals"></Collection>
+	<Collection src="mySelfAwarenessGoals"></Collection>
+	<Collection src="myGiveBackGoals"></Collection>
+	
 	<Window id="win" class="container" >
-
+	
+		<Label id="money" onClick="openMoney"></Label>
+		<Label id="career" onClick="openMoney"></Label>
+		<Label id="health" onClick="openMoney"></Label>
+		<Label id="relationship" onClick="openMoney"></Label>
+		<Label id="selfCare" onClick="openMoney"></Label>
+		<Label id="selfAwareness" onClick="openMoney"></Label>
+		<Label id="giveBack" onClick="openMoney"></Label>
+		
 		<ImageView id="image" onClick="openView"></ImageView>
-		<TextField id="username" onClick="showDone"></TextField>
-		<Button id="nameDone" onClick="saveName"></Button>
-		<Label id="userLabel"></Label>
+		<TextField id="username" onReturn="saveName"></TextField>
+		<Label id="userLabel" onClick="onUsernameClick"></Label>
+		<ImageView id="buttonsImageBack"></ImageView>
 		<Label id="buttonsImage" onClick="showCoreVal"></Label>
 		<Button id="viewAch" onClick="showAchiev" class="myb">VIEW MY ACHIEVEMENTS</Button>
 		<Button id="liftme" onClick="showAdvice"class="myb">LIFT ME UP</Button>

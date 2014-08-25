@@ -1,6 +1,6 @@
 "#win" : {
   backgroundColor:'white',
-  title:'Settings'
+  title:'My Acheivments'
 }
 
 "#achievTable":{
@@ -10,4 +10,8 @@
 	title:"<< HOME",
 	order:2
 	
+}
+
+"#deleteButton":{
+	bottom:10
 }

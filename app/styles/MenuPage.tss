@@ -2,13 +2,15 @@
 	backgroundColor: "white"
 }
 
+
+
 "#inspiration":{
 	width:'70%',
 	height:'30%',
 	top:'30%',
 	left:'15%',
 	visible:'false',
-	zIndex:1,
+	zIndex:10,
 	borderColor:'#3BB9FF',
 	borderWidth:2,
 	color:'#3BB9FF',
@@ -16,7 +18,8 @@
 }
 
 "#advice":{
-	width:Ti.UI.FILL,
+	right:5,
+	left:5,
 	height:Ti.UI.FILL,
 	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
 	font: {
@@ -54,19 +57,117 @@
 	left: 20,
 	top: 20
 }
+
+"#buttonsImageBack":{
+	width: '70%',
+	height: '45%',
+	borderRadius: '35%',
+	left: '15%',
+	top: 140,
+	image:'/cores.png',
+	zIndex:2
+}
+
+"#career":{
+	top:150,
+	left:'25%',
+	width:90,
+	height:45,
+	backgroundColor:'transparent',
+	//borderColor:'black',
+	borderRadius:20,
+	borderWidth:1,
+	zIndex:4	 
+}
+
+"#health":{
+	top:150,
+	left:'52%',
+	width:70,
+	height:40,
+	backgroundColor:'transparent',
+	//borderColor:'black',
+	borderRadius:20,
+	borderWidth:1,
+	zIndex:4	 
+}
+
+"#money":{
+	top:193,
+	left:'73%',
+	width:45,
+	height:90,
+	backgroundColor:'transparent',
+	//borderColor:'black',
+	borderRadius:20,
+	borderWidth:1,
+	zIndex:4	 
+}
+
+"#relationship":{
+	top:350,
+	left:'41%',
+	width:90,
+	height:42,
+	backgroundColor:'transparent',
+	//borderColor:'black',
+	borderRadius:20,
+	borderWidth:1,
+	zIndex:4	 
+}
+
+"#selfCare":{
+	top:290,
+	left:'67%',
+	width:50,
+	height:80,
+	backgroundColor:'transparent',
+	//borderColor:'black',
+	borderRadius:20,
+	borderWidth:1,
+	zIndex:4	 
+}
+
+"#selfAwareness":{
+	top:300,
+	left:'17%',
+	width:70,
+	height:70,
+	backgroundColor:'transparent',
+	//borderColor:'black',
+	borderRadius:20,
+	borderWidth:1,
+	zIndex:4	 
+}
+
+"#giveBack":{
+	top:190,
+	left:'15%',
+	width:40,
+	height:100,
+	backgroundColor:'transparent',
+	//borderColor:'black',
+	borderRadius:20,
+	borderWidth:1,
+	zIndex:4	 
+}
+
 "#buttonsImage": {
-	backgroundColor: '#3BB9FF',
-	width: 200,
-	height: 200,
-	borderRadius: 100,
-	left: 75,
-	color: 'white',
+	backgroundColor:'transparent',
+	width: 170,
+	height: 170,
+	borderRadius: 85,
+	//borderColor:'black',
+	borderWidth:1,
+	left: 95,
+	color: 'black',
 	text: 'CORE VALUES',
 	font: {
 		fontSize: 20
 	},
-	top: 150,
-	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+	top: 178,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	zIndex:3
 }
 "#viewAch":{
 
@@ -76,19 +177,13 @@
 	color: '#3BB9FF'
 }
 
-"#nameDone":{
-	top:20,
-	right:10,
-	title:'DONE',
-	visible:false,
-	font:{fontSize:15}
-}
 
 "#liftme":{
 	bottom: 20,
 	left: 20,
 	right: 20,
-	color: '#3BB9FF'
+	color: '#3BB9FF',
+	zIndex:1
 }
 "#loadImage":{
 	bottom: 0,
@@ -96,7 +191,7 @@
 	backgroundColor: '#3BB9FF',
 	width: Ti.UI.FILL,
 	visible: false,
-	zIndex: 1
+	zIndex: 8
 }
 
 "#load":{

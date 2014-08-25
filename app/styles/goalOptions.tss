@@ -1,0 +1,230 @@
+
+"#win" : {
+  backgroundColor:"white"
+}
+"#itemSave":{
+	order:2,
+	title:"Save"
+	
+}
+
+"#itemBack":{
+	title:"<< Money",
+	order:1
+	
+}
+
+"#image1":{
+top:40,
+height:20,
+width:20,
+borderColor:'black',
+borderRadius:15,
+image: '/1.png',
+left: 20
+}
+
+"#image2":{
+top:40,
+borderColor:'black',
+height:20,
+width:20,
+borderRadius:15,
+image: '/2.png',
+left: 60
+}
+
+"#image3":{
+top:40,
+borderColor:'black',
+height:20,
+width:20,
+borderRadius:15,
+image: '/3.png',
+left: 100
+}
+
+"#image4":{
+top:40,
+borderColor:'black',
+height:20,
+width:20,
+borderRadius:15,
+image: '/4.png',
+left: 140
+}
+
+"#image5":{
+top:40,
+borderColor:'black',
+height:20,
+width:20,
+borderRadius:15,
+image: '/5.png',
+left: 180
+}
+
+"#image6":{
+top:40,
+height:20,
+width:20,
+borderColor:'black',
+borderRadius:15,
+image: '/6.png',
+left: 220
+}
+
+
+"#label1" :{
+	top:10,
+	height:30,
+	left:20
+}
+
+"#line1":{
+    height:1,
+    width:Ti.UI.FILL,
+    top:80,
+    backgroundColor:'#000'
+}
+
+"#day":{
+	borderColor:'black',
+top:120,
+height:40,
+width:40,
+borderRadius:20,
+image:'/day.png',
+left: 20
+}
+
+"#week":{
+top:120,
+height:40,
+width:40,
+borderRadius:20,
+image: '/week.png',
+borderColor:'black',
+left: 70
+}
+
+"#month":{
+top:120,
+height:40,
+width:40,
+borderColor:'black',
+borderRadius:20,
+image: '/month.png',
+left: 120
+}
+
+"#year":{
+top:120,
+height:40,
+width:40,
+borderColor:'black',
+borderRadius:20,
+image: '/year.png',
+left: 170
+}
+
+"#once":{
+top:120,
+height:40,
+width:40,
+borderColor:'black',
+borderRadius:20,
+image: '/once.png',
+left: 220
+}
+
+
+"#label2" :{
+	top:90,
+	height:30,
+	left:20
+}
+
+"#line2":{
+    height:1,
+    width:Ti.UI.FILL,
+    top:170,
+    backgroundColor:'black'
+}
+
+"#label3":{
+	top:180,
+	height:30,
+	left:20
+}
+
+"#when":{
+	top:180,
+	right:40,
+	text:'MONDAY'
+}
+
+"#arrow3":{
+	top:180,
+	right:20,
+	text:'>>'
+}
+"#line3":{
+    height:1,
+    width:Ti.UI.FILL,
+    top:220,
+    backgroundColor:'black'
+}
+
+"#label4":{
+	top:230,
+	height:30,
+	left:20
+}
+
+"#where":{
+	top:230,
+	right:40,
+	text:'BEACH'
+}
+
+"#arrow4":{
+	top:230,
+	right:20,
+	text:'>>'
+}
+
+"#line4":{
+    height:1,
+    width:Ti.UI.FILL,
+    top:270,
+    backgroundColor:'black'
+}
+
+"#label5":{
+	top:280,
+	height:30,
+	left:20
+}
+"#value":{
+	top:280,
+	right:40,
+	text:'ABUNDANCE'
+}
+
+"#deleteButton":{
+	bottom:20
+}
+
+"#arrow5":{
+	top:280,
+	right:20,
+	text:'>>'
+}
+
+"#line5":{
+    height:1,
+    width:Ti.UI.FILL,
+    top:320,
+    backgroundColor:'black'
+}

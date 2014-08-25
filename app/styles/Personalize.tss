@@ -75,14 +75,6 @@
 	color: '#3BB9FF'
 }
 
-"#nameDone":{
-	top:20,
-	right:10,
-	title:'DONE',
-	visible:false,
-	font:{fontSize:15}
-}
-
 "#liftme":{
 	bottom: 20,
 	left: 20,

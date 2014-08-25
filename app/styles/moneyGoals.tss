@@ -1,0 +1,24 @@
+
+".container" : {
+  
+}
+"#chooseLabel":{
+	top:0,
+	width:Ti.UI.FILL,
+	height:50,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	color:'black'
+}
+
+"#win":{
+	backgroundColor:'white',
+	title:'Money'
+}
+
+"#moneyTable":{
+	top:50
+}
+
+"#itemHome":{
+	title:'Home>>'
+}

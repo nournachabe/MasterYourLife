@@ -1,4 +1,5 @@
 <Alloy>
+	<Collection src="corevalues_model"></Collection>
 	<Window id="win">
 		<TableView id="coreTable" onClick="coreSelect"></TableView>
 		<Menu id="menu" platform="android">

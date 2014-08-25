@@ -1,6 +1,8 @@
 <Alloy>
+	<Collection src="myAchievements"></Collection>
 	<Window id="win">
 	<TableView id="achievTable"></TableView>
+	<Button id="deleteButton" onClick="deleteMyAchievements">Delete my achievements</Button>
 	<Menu id="menu" platform="android">
     	<!-- Cannot specify node text.  Use attributes only. -->
         <MenuItem id="itemHome"

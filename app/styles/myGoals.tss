@@ -1,0 +1,41 @@
+"#win":{
+	backgroundColor: 'white'
+}
+
+"#add":{
+	top: 8,
+	borderRadius: '10%',
+	image: '/plus.png',
+	height: '28%',
+	width: '17%',
+	left: '41.5%',
+	zIndex: 1
+}
+
+
+"#addView":{
+	top: 360,
+	borderColor: 'black',
+	backgroundColor: 'white',
+	borderWidth: 1,
+	width: Ti.UI.FILL,
+	height: Ti.UI.FILL
+}
+
+"#addLabel":{
+	top: 64,
+	left: 120,
+	zIndex: 1
+}
+
+"#myGoalsTable":
+{
+	height: 480,
+	top: 0,
+	width: Ti.UI.FILL
+}
+
+"#itemHome":
+{
+	title:'Home>>'
+}

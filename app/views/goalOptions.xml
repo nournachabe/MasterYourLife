@@ -1,0 +1,39 @@
+<Alloy>
+	<Window id="win">
+		<Label id="label1">HOW OFTEN?</Label>
+		<ImageView id="image1" onClick="clicked"></ImageView>
+		<ImageView id="image2" onClick="clicked"></ImageView>
+		<ImageView id="image3" onClick="clicked"></ImageView>
+		<ImageView id="image4" onClick="clicked"></ImageView>
+		<ImageView id="image5" onClick="clicked"></ImageView>
+		<ImageView id="image6" onClick="clicked"></ImageView>
+		<Label id="line1"></Label>
+		<Label id="label2">EVERY</Label>
+		<ImageView id="day" onClick="clicked"></ImageView>
+		<ImageView id="week" onClick="clicked"></ImageView>
+		<ImageView id="month" onClick="clicked"></ImageView>
+		<ImageView id="year" onClick="clicked"></ImageView>
+		<ImageView id="once" onClick="clicked"></ImageView>
+		<Label id="line2"></Label>
+		<Label id="label3">WHEN?</Label>
+		<Label id="when"></Label>
+		<Label id="arrow3"></Label>
+		<Label id="line3"></Label>
+		<Label id="label4">WHERE? OR WITH WHOM?</Label>
+		<Label id="where"></Label>
+		<Label id="arrow4"></Label>
+		<Label id="line4"></Label>
+		<Label id="label5">WHICH VALUE?</Label>
+		<Label id="value"></Label>
+		<Label id="arrow5"></Label>
+		<Label id="line5"></Label>
+		<Button id="deleteButton" onClick="deleteMyGoals">Delete my goals</Button>
+		<Menu id="menu" platform="android">
+			<!-- Cannot specify node text.  Use attributes only. -->
+			<MenuItem id="itemSave" onClick="saveGoal" showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"
+			/>
+			<MenuItem id="itemBack" onClick="back" showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"
+			/>
+		</Menu>
+	</Window>
+</Alloy>

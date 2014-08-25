@@ -7,14 +7,15 @@ var dialog = Ti.UI.createAlertDialog({
 	title : 'Welcome!'
 }).show();
 //Functions:
-
+var username='',userimage=$.image.image;
 
 function addUser(name,image) {
    var userProfile = {
   name:name,
   image:image
 };
-Ti.App.Properties.setString("userProfile", JSON.stringify(userProfile));
+Ti.App.Properties.setObject("userProfile", userProfile);
+Ti.API.info(JSON.stringify(Ti.App.Properties.getObject("userProfile")));
    
 }
 
@@ -55,15 +56,19 @@ function cancel() {
 	$.loadImage.visible = false;
 }
 
-function showDone() {//when the username textfield is clicked button done shows up
-	$.nameDone.visible = true;
+function onUsernameClick(){
+	$.username.show();
+	$.username.focus();
+	$.userLabel.visible=false;
 }
 
-function saveName() {//when button name is clicked the username is saved
-	$.nameDone.visible = false;
+function saveName() {//when button done is clicked the username is saved
 	$.username.hide();
 	$.userLabel.text = $.username.value;
-	addUser($.userLabel.text,$.image.image);
+	$.userLabel.show();
+	username=$.username.value;
+	userimage=$.image.image;
+	addUser(username,userimage);
 }
 
 function showSettings() {
@@ -80,7 +85,8 @@ function loadImage() {
 			Ti.API.debug('Our type was: ' + event.mediaType);
 			if (event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
 				$.image.image = event.media;
-				Ti.API.info("image ya nour:"+JSON.stringify($.image.image));
+				userimage=$.image.image;
+				addUser(username,userimage);
 			} else {
 				alert("got the wrong type back =" + event.mediaType);
 			}

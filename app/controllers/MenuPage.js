@@ -1,57 +1,70 @@
 var args = arguments[0] || {};
 
-function fillValues(){
-var profile=JSON.parse(Ti.App.Properties.getString("userProfile"));
-var cores=JSON.parse(Ti.App.Properties.getString("coreValues")).cores;
-$.userLabel.text=profile.name;
-$.image.image=profile.image.nativePath;
-$.buttonsImage.text = cores[0];
+//Main:
+var api = require('api');
+var myFun = require('myFunctions');
+Ti.API.info('hello menu page');
+fillValues();
+var username = $.userLabel.text;
+var userimage = $.image.image;
+var insCol = Alloy.Collections.inspiration_model;
+insCol.fetch();
+insCol.setSortField('ins_order', 'ASC');
+insCol.sort();
+var ins = insCol.toJSON();
+//Functions
+
+function fillValues() {
+	var profile = Ti.App.Properties.getObject("userProfile");
+	Ti.API.info(JSON.stringify(profile));
+	var cores = JSON.parse(Ti.App.Properties.getString("coreValues")).cores;
+
+	Ti.API.info(JSON.stringify(cores));
+	$.userLabel.text = profile.name;
+	$.image.image = profile.image.nativePath;
+	$.buttonsImage.text = cores[0];
 	for ( i = 1; i < cores.length; i++) {
 		$.buttonsImage.text += "\n" + cores[i];
 	}
+	Ti.API.info('Done filling');
 }
-//alert(JSON.stringify(profile)+"/n"+JSON.stringify(cores));
 
+function openMoney(event) {
+	var id=event.source.id;
+	var goals=myFun.getMyModel(id);
+	
+	if (goals.length == 0) {
+		var myMoney = Alloy.createController("moneyGoals", {type:id}).getView();
+		myMoney.open();
+	} else {
+		var myGoals = Alloy.createController("myGoals", {menuPage:true,type:id}).getView();
+		myGoals.open();
+	}
+}
 
-//Main:
-//$.win.open();
-var api = require('api');
-fillValues();
-/*var dialog = Ti.UI.createAlertDialog({
-	message : 'Tap to personalize your App',
-	ok : 'Get started!',
-	title : 'Welcome!'
-}).show();*/
-//Functions:
+function addUser(name, image) {
+	var userProfile = {
+		name : name,
+		image : image
+	};
+	Ti.App.Properties.setObject("userProfile", userProfile);
 
-
-function addUser(name,image) {
-   var userProfile = {
-  name:name,
-  image:image
-};
-Ti.App.Properties.setString("userProfile", JSON.stringify(userProfile));
-   
 }
 
 function showAdvice() {
-	var ins = [];
-	api.getInspiration(function(e) {
-		if (e.success) {
-			ins = e.data;
-			var index=Math.floor(Math.random()*ins.length);
-			$.advice.text=ins[index].Inspiration;
-		} else {
-			Ti.API.info('An error has occured');
-		}
-	});
-
+	var index = Ti.App.Properties.getInt('inspiration', 0);
+	$.advice.text = ins[index].inspiration;
+	if (index < ins.length)
+		index = index + 1;
+	else
+		index = 0;
+	Ti.App.Properties.setInt('inspiration', index);
 	$.inspiration.show();
 
 }
 
 function hide() {
-	$.advice.text='';
+	$.advice.text = '';
 	$.inspiration.hide();
 
 }
@@ -71,15 +84,18 @@ function cancel() {
 	$.loadImage.visible = false;
 }
 
-function showDone() {//when the username textfield is clicked button done shows up
-	$.nameDone.visible = true;
+function onUsernameClick() {
+	$.username.show();
+	$.username.value = username;
+	$.userLabel.visible = false;
 }
 
 function saveName() {//when button name is clicked the username is saved
-	$.nameDone.visible = false;
 	$.username.hide();
+	$.userLabel.show();
+	username = $.username.value;
 	$.userLabel.text = $.username.value;
-	addUser($.userLabel.text,$.image.image);
+	addUser(username, userimage);
 }
 
 function showSettings() {
@@ -96,6 +112,8 @@ function loadImage() {
 			Ti.API.debug('Our type was: ' + event.mediaType);
 			if (event.mediaType == Ti.Media.MEDIA_TYPE_PHOTO) {
 				$.image.image = event.media;
+				userimage = $.image.image;
+				addUser(username, userimage);
 			} else {
 				alert("got the wrong type back =" + event.mediaType);
 			}
@@ -106,7 +124,7 @@ function loadImage() {
 		error : function(error) {
 			// called when there's an error
 			var a = Titanium.UI.createAlertDialog({
-				
+
 				title : 'Camera'
 			});
 			if (error.code == Titanium.Media.NO_CAMERA) {

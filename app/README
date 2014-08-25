@@ -29,3 +29,4 @@ widgets				pre-built, reusable components for your Ally apps.
 
 Also, in the root is the alloy.jmk file and config.json.  Alloy.jmk acts like a makefile and can be used to hook into the Alloy compiler to customize the build process. The config.json file is where you can declare runtime contstants, and widget dependencies.
 
+.
