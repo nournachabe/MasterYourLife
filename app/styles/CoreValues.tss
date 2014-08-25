@@ -1,0 +1,18 @@
+
+"#win" : {
+  backgroundColor:"white",
+  title:"Core Values"
+}
+
+"#itemDone":{
+	order:1,
+	title:"DONE"
+	
+}
+
+"#itemHome":{
+	title:"<< HOME",
+	order:2
+	
+}
+

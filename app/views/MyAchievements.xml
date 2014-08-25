@@ -1,0 +1,13 @@
+<Alloy>
+	<Window id="win">
+	<TableView id="achievTable"></TableView>
+	<Menu id="menu" platform="android">
+    	<!-- Cannot specify node text.  Use attributes only. -->
+        <MenuItem id="itemHome"
+        	onClick="home"
+        	showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"
+        	/>
+		</Menu>
+	
+	</Window>
+</Alloy>

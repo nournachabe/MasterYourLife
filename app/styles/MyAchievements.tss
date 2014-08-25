@@ -1,0 +1,13 @@
+"#win" : {
+  backgroundColor:'white',
+  title:'Settings'
+}
+
+"#achievTable":{
+	separatorColor:'#3BB9FF'}
+
+"#itemHome":{
+	title:"<< HOME",
+	order:2
+	
+}

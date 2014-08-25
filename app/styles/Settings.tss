@@ -1,0 +1,14 @@
+
+"#win" : {
+  backgroundColor:'white',
+  title:'Settings'
+}
+
+"#settingsTable":{
+	separatorColor:'#3BB9FF'}
+
+"#itemHome":{
+	title:"<< HOME",
+	order:2
+	
+}

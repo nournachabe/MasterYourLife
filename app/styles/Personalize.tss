@@ -1,0 +1,122 @@
+".container": {
+	backgroundColor: "white"
+}
+
+"#inspiration":{
+	width:'70%',
+	height:'30%',
+	top:'30%',
+	left:'15%',
+	visible:'false',
+	zIndex:1,
+	borderColor:'#3BB9FF',
+	borderWidth:2,
+	color:'#3BB9FF',
+	backgroundColor:'white'
+}
+
+"#advice":{
+	width:Ti.UI.FILL,
+	height:Ti.UI.FILL,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+	font: {
+		fontSize: 20
+	}
+}
+
+"#win": {
+	title: "Master Your Life"
+}
+
+"#username": {
+	top: 27,
+	color: "gray",
+	right: 75,
+	left: 90
+}
+"#userLabel":
+{
+	top: 27,
+	color: "gray",
+	left:90,
+	font: {
+		fontSize: 30
+	}
+	
+}
+
+"#image": {
+	image: '/icons2.png',
+	width: 60,
+	height: 60,
+	borderRadius: 30,
+	left: 20,
+	top: 20
+}
+"#buttonsImage": {
+	backgroundColor: '#3BB9FF',
+	width: 200,
+	height: 200,
+	borderRadius: 100,
+	left: 75,
+	color: 'white',
+	text: 'CORE VALUES',
+	font: {
+		fontSize: 20
+	},
+	top: 150,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER
+}
+"#viewAch":{
+
+	bottom: 80,
+	left: 20,
+	right: 20,
+	color: '#3BB9FF'
+}
+
+"#nameDone":{
+	top:20,
+	right:10,
+	title:'DONE',
+	visible:false,
+	font:{fontSize:15}
+}
+
+"#liftme":{
+	bottom: 20,
+	left: 20,
+	right: 20,
+	color: '#3BB9FF'
+}
+"#loadImage":{
+	bottom: 0,
+	height: 200,
+	backgroundColor: '#3BB9FF',
+	width: Ti.UI.FILL,
+	visible: false,
+	zIndex: 1
+}
+
+"#load":{
+	bottom: 100,
+	left: 20,
+	right: 20,
+	backgroundColor: 'white',
+	color: 'gray'
+}
+"#cancel":{
+	bottom: 40,
+	left: 20,
+	right: 20,
+	backgroundColor: 'white',
+	color: 'gray'
+}
+"#setPicture":
+{
+	font: {
+		fontSize: 20
+	},
+	bottom: 160,
+	color: "white"
+}

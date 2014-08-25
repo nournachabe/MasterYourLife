@@ -1,0 +1,28 @@
+<Alloy>
+	<Window id="win" class="container" >
+
+		<ImageView id="image" onClick="openView"></ImageView>
+		<TextField id="username" onClick="showDone"></TextField>
+		<Button id="nameDone" onClick="saveName"></Button>
+		<Label id="userLabel"></Label>
+		<Label id="buttonsImage" onClick="showCoreVal"></Label>
+		<Button id="viewAch" onClick="showAchiev" class="myb">VIEW MY ACHIEVEMENTS</Button>
+		<Button id="liftme" onClick="showAdvice"class="myb">LIFT ME UP</Button>
+		<View id="loadImage">
+			<Label id="setPicture">SET PROFILE PICTURE</Label>
+			<Button id="load" onClick="loadImage">CHOOSE FROM LIBRARY</Button>
+			<Button id="cancel" onClick="cancel">CANCEL</Button>
+		</View>
+		<View id="inspiration" onClick="hide">
+			<Label id="advice"/>
+		</View>
+		<Menu id="menu" platform="android">
+			<!-- Cannot specify node text.  Use attributes only. -->
+			<MenuItem id="settings"
+			onClick="showSettings"
+			icon="/pignon.png"
+			showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"
+			/>
+		</Menu>
+	</Window>
+</Alloy>
